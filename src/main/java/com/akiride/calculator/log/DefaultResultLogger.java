@@ -11,4 +11,8 @@ public class DefaultResultLogger extends AbstractResultLogger {
         System.out.println(PREFIX + num.toString());
     }
 
+    @Override
+    public void export(String tip) {
+        System.out.println(tip);
+    }
 }

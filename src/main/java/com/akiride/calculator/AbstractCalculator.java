@@ -59,6 +59,14 @@ public abstract class AbstractCalculator implements Calculator {
         this.logger.export(num);
     }
 
+    /**
+     * 输出提示
+     * @param tip
+     */
+    protected final void doExport(String tip) {
+        this.logger.export(tip);
+    }
+
     public void undo() {
         throw new UnsupportedOperationException();
     }

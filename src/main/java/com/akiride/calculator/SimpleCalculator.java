@@ -49,7 +49,7 @@ public class SimpleCalculator extends AbstractCalculator {
     @Override
     public void appendNum(BigDecimal nums) {
         if (nums == null) {
-            System.out.println("设置数字为空");
+            this.doExport("设置数字为空");
             return;
         }
         if (this.preSum == null) {
@@ -62,7 +62,7 @@ public class SimpleCalculator extends AbstractCalculator {
     @Override
     public void appendOperator(OperatorEnum operator) {
         if (operator == null) {
-            System.out.println("设置操作符为空，请重新设置");
+            this.doExport("设置操作符为空，请重新设置");
             return;
         }
         this.currentOperator = operator;
@@ -86,6 +86,7 @@ public class SimpleCalculator extends AbstractCalculator {
             this.preSum = result;
             setResult(this.currentOperator, result);
         } catch (Exception e) {
+            this.doExport("提示：" + e.getMessage());
             result = BigDecimal.ZERO;
         }
         doExport(result);

@@ -6,4 +6,8 @@ public abstract class AbstractResultLogger implements ResultLogger {
 
     public void export(BigDecimal num) {
     }
+
+    public void export(String tip) {
+
+    }
 }

@@ -5,4 +5,6 @@ import java.math.BigDecimal;
 public interface ResultLogger {
 
     void export(BigDecimal num);
+
+    void export(String tip);
 }
